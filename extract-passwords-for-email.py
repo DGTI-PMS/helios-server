@@ -5,11 +5,17 @@
 # python extract-passwords-for-email.py <election_uuid> <email_address>
 #
 
-from django.core.management import setup_environ
-import settings, sys, csv
+#from django.core.management import setup_environ
+#import settings, sys, csv
 
-setup_environ(settings)
+import sys, csv
+import os
+import django
 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+django.setup()
+
+from django.conf import settings
 from helios.models import *
 
 election_uuid = sys.argv[1]
