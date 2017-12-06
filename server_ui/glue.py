@@ -15,11 +15,11 @@ def vote_cast_send_message(user, voter, election, cast_vote, **kwargs):
   subject = "%s - vote cast" % election.name
   
   body = """
-You have successfully cast a vote in
+Voce depositou o seu voto com sucesso em
 
   %s
   
-Your ballot is archived at:
+A sua cedula esta arquivada em:
 
   %s
 """ % (election.name, helios.views.get_castvote_url(cast_vote))
@@ -27,8 +27,8 @@ Your ballot is archived at:
   if election.use_voter_aliases:
     body += """
 
-This election uses voter aliases to protect your privacy.
-Your voter alias is : %s    
+Esta eleicao utiliza-se de aliases para proteger a sua privacidade.
+O seu alias para votacao e : %s    
 """ % voter.alias
 
   body += """

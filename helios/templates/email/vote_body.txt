@@ -1,29 +1,30 @@
-Dear {{voter.name}},
+Caro(a) {{voter.name}},
 
 {{custom_message|safe}}
 
-Election URL:  {{election_vote_url}}
-Election Fingerprint:  {{voter.election.hash}}
+URL Eleição:  {{election_vote_url}}
+Identificador único da eleição:  {{voter.election.hash}}
 {% ifequal voter.voter_type "password" %}
-Your voter ID: {{voter.voter_login_id}}
-Your password: {{voter.voter_password}}
+Seu LOGIN: {{voter.voter_login_id}}
+Sua SENHA: {{voter.voter_password}}
 {% else %}
-Log in with your {{voter.voter_type}} account.
+Acesse a sua conta {{voter.voter_type}}.
 {% endifequal %}{% if voter.vote_hash %}
-We have recorded your vote with smart tracker:
+Nós registramos o seu voto com um rastreador inteligente:
 
   {{voter.vote_hash}}
 
-You may re-vote if you wish: only your last vote counts.
+Você poderá votar novamente se assim o desejar: somente o seu último voto irá contar.
 {% endif %}{% if election.use_voter_aliases %}
-In order to protect your privacy, this election is configured
-to never display your voter login ID, name, or email address to the public.
-Instead, the ballot tracking center will only display your alias.
+Para proteger a sua privacidade, esta eleição está configurada
+para nunca exibir o seu LOGIN, NOME ou E-MAIL para o público.
+Ao invés disso, a centro de rastreio de cédulas somente irá exibir o seu apelido.
 
-Your voter alias is {{voter.alias}}.
+O seu apelido de votação é {{voter.alias}}.
 
-IMPORTANTLY, when you are prompted to log in to vote,
-please use your *voter ID*, not your alias.
+IMPORTANTE, quando for solicitado à você para logar-se para votar,
+por favor utilize o seu *login*, não o seu apelido.
 {% endif %}
 --
-Helios
+CMESO - Prefeitura de Sorocaba
+Sistema Helios

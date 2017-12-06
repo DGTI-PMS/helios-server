@@ -1,8 +1,9 @@
-Dear {{voter.name}},
+Caro(a) {{voter.name}},
 
 {{custom_message|safe}}
 
-Election Link: {{election_vote_url}}
+URL eleição: {{election_vote_url}}
 
 --
-Helios
+CMESO - Prefeitura de Sorocaba.
+Sistema Helios
