@@ -7,3 +7,10 @@ venv
 celerybeat-*
 env.sh
 .cache
+# Custom      
+settings.py
+*.swo
+*.swp
+*.log
+*.pid
+tags
